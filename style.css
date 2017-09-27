@@ -1,7 +1,22 @@
 body {
-  background: tomato;
+  background: #FAFAFA;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
-.full-page {
+
+/*.full-page {
   height: 100vh;
+  padding-left: 25%;
+  padding-right: 25%;
+}*/
+
+#bottom-button {
+  position: fixed;
+  bottom: 20px;
 }
+
+
+/*.hidden {
+  display: none;
+}*/

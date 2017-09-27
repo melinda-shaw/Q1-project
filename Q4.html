@@ -23,11 +23,9 @@
 <img class='yes' src='xxx.jpg'>
 <img id='yay' src='www.jpg'> -->
 
-  <div class="container .d-sm-flex ">
+  <div class="full-page container .d-sm-flex ">
 
-
-
-    <div class=" row d-flex align-items-center">
+    <div class="row d-flex align-items-center">
       <div class="col text-center ">
 
         <div class="alert alert-warning" role="alert">
@@ -39,25 +37,33 @@
 
       <div class="container">
         <div class="row ">
-          <div class="col text-center">
-            <button type="button" class="btn btn-warning">Yes</button>
 
-            <div class="alert alert-info" role="alert">
+          <div class="col text-center">
+            <button data-toggle="collapse" data-target="#yes-answer" type="button" class="btn btn-warning ">Yes</button>
+
+            <div id='yes-answer' style=display-hidden class="collapse alert alert-info" role="alert">
               Text from a friend's phone. Save your battery in case you need to call security on the way back to your dorm.
             </div>
           </div>
 
           <div class="col  text-center">
-            <button type="button" class="btn btn-warning">No, it's at 8%.</button>
+            <button data-toggle="collapse" data-target="#no-answer" type="button" class="btn btn-warning">No, it's at 8%.</button>
 
-            <div class="alert alert-info" role="alert">
+            <div id='no-answer' style=display-hidden class="collapse alert alert-info" role="alert">
               Text now.
             </div>
+
           </div>
         </div>
+
+        <div class="col text-center ">
+
+          <a id='bottom-button' class=" btn btn-dark" href="index.html" role="button">Back to questions</a>
+
+        </div>
+
       </div>
     </div>
-
   </div>
 
 
