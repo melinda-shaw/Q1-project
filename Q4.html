@@ -14,6 +14,8 @@
   <!-- my JS and CSS -->
   <script defer src="main.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Loved+by+the+King" rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,45 +28,48 @@
   <div class="full-page container .d-sm-flex ">
 
     <div class="row d-flex align-items-center">
-      <div class="col text-center ">
+      <div class="col-12 text-center ">
 
         <div class="alert alert-warning" role="alert">
           Is it 11:37 p.m. on her bday and you have been crazy busy all day and are now out and your battery is at 4%?
         </div>
 
       </div>
+    </div>
 
+    <!-- div class="container" -->
+    <div class="row ">
 
-      <div class="container">
-        <div class="row ">
+      <div class="col-6 text-center">
+        <button data-toggle="collapse" data-target="#yes-answer" type="button" class="btn btn-warning ">Yes</button>
 
-          <div class="col text-center">
-            <button data-toggle="collapse" data-target="#yes-answer" type="button" class="btn btn-warning ">Yes</button>
-
-            <div id='yes-answer' style=display-hidden class="collapse alert alert-info" role="alert">
-              Text from a friend's phone. Save your battery in case you need to call security on the way back to your dorm.
-            </div>
-          </div>
-
-          <div class="col  text-center">
-            <button data-toggle="collapse" data-target="#no-answer" type="button" class="btn btn-warning">No, it's at 8%.</button>
-
-            <div id='no-answer' style=display-hidden class="collapse alert alert-info" role="alert">
-              Text now.
-            </div>
-
-          </div>
+        <div id='yes-answer' style=display-hidden class="collapse alert alert-info" role="alert">
+          Text from a friend's phone. Save your battery in case you need to call security on the way back to your dorm.
         </div>
+      </div>
 
-        <div class="col text-center ">
+      <div class="col-6  text-center">
+        <button data-toggle="collapse" data-target="#no-answer" type="button" class="btn btn-warning">No, it's at 8%.</button>
 
-          <a id='bottom-button' class=" btn btn-dark" href="index.html" role="button">Back to questions</a>
+        <div id='no-answer' style=display-hidden class="collapse alert alert-info" role="alert">
+          Text now.
 
         </div>
 
       </div>
     </div>
+
+
+
+
+    <div class="row ">
+      <div class="col-12 d-flex align-items-center">
+        <!-- <a id='bottom-button' class=" btn btn-dark" href="index.html" role="button">Back to questions</a> -->
+
+      </div>
+    </div>
   </div>
+
 
 
 
