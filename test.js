@@ -1,8 +1,8 @@
 var questions = [{
     id: "id='q4'",
-    class: '"alert alert-success"',
+    class: 'alert alert-warning',
     qText: "Is it 11:37 p.m. on her bday and you have been crazy busy all day and are now out and your battery is at 4%?",
-    answer: [{
+    response: [{
       answer: "Yes",
       text: "Text from a friend's phone. Save your battery in case you need to call security on the way back to your dorm."
     }, {
@@ -12,8 +12,9 @@ var questions = [{
   },
   {
     id: "id='q5'",
+    class: 'alert alert-info',
     qText: "Did you just spot Malia Obama?",
-    answer: [{
+    response: [{
       answer: "Yes",
       text: "Text mom. But do not be such a creeper around Malia that she has to tex Michelle."
     }, {
@@ -23,8 +24,9 @@ var questions = [{
   },
   {
     id: "id='q3'",
+    class: 'alert alert-secondary',
     qText: "Can you not find your umbrella and dental floss?",
-    answer: [{
+    response: [{
       answer: "Yes",
       text: "Text. She knows exactly where they are."
     }, {
@@ -34,8 +36,9 @@ var questions = [{
   },
   {
     id: "id='q6'",
+    class: 'alert alert-danger',
     qText: "Has it been more than 24 hours since she texted you with a non-urgent question?",
-    answer: [{
+    response: [{
       answer: "Yes",
       text: "Are you the first sibling to leave the nest?",
       answer: [{
@@ -48,6 +51,48 @@ var questions = [{
     }, {
       answer: "No",
       text: "You can chill."
+    }]
+  },
+
+  {
+    id: "id='q2'",
+    class: 'alert alert-dark',
+    qText: "Are your classes messed up?",
+    response: [{
+      answer: "Yes",
+      text: "Do you expect her to fix this?",
+      answer: [{
+        answer: "Yes",
+        text: "Alas, she cannot. It’s all you."
+      }, {
+        answer: "No",
+        text: "Do text for sympathy."
+      }]
+    }, {
+      answer: "No",
+      text: "Amazing! Text to tell her."
+    }]
+  },
+  {
+    id: "id='q1'",
+    class: 'alert alert-warning',
+    qText: "Are you injured?",
+    response: [{
+      answer: "Yes",
+      text: "Did you seek medical help?",
+      responseLevel2: [{
+        answer: "Yes",
+        text: "Good. Now text."
+      }, {
+        answer: "No",
+        text: "Seek help or she will freak. : )"
+      }]
+    }, {
+      answer: "No",
+      text: "Whew! Text away."
+    }, {
+      answer: "Yes, but only your feelings.",
+      text: "Text and maybe call. !<3!"
     }]
   }
 ]
@@ -68,12 +113,22 @@ var br = `</br>`
 function appendArticle() {
   for (var i = 0; i < questions.length; i++) {
     $('.main-questions').append(
-      `<div ${questions[i].id} class="alert alert-success" role="alert">` +
+      `<div ${questions[i].id} class="${questions[i].class}" role="alert">` +
       `<a href="# " class="alert-link ">${questions[i].qText}</a>` +
       divClose)
   }
 }
 appendArticle()
+
+function myFunction() {
+  var x = document.getElementById('myDIV');
+  if (x.style.display === 'none') {
+    x.style.display = 'block';
+  } else {
+    x.style.display = 'none';
+  }
+}
+myFunction()
 
 // function appendArticle() {
 //   for (var i = 0; i < questions.length; i++) {
