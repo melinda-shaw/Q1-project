@@ -1,5 +1,5 @@
 var questions = [{
-    id: "id='q4'",
+    id: "q4",
     class: 'alert alert-warning',
     qText: "Is it 11:37 p.m. on her bday and you have been crazy busy all day and are now out and your battery is at 4%?",
     response: [{
@@ -11,19 +11,19 @@ var questions = [{
     }]
   },
   {
-    id: "id='q5'",
+    id: "q5",
     class: 'alert alert-info',
     qText: "Did you just spot Malia Obama?",
     response: [{
       answer: "Yes",
-      text: "Text mom. But do not be such a creeper around Malia that she has to tex Michelle."
+      text: "Text mom. But do not be such a creeper around Malia that she has to text Michelle."
     }, {
       answer: "Nope",
       text: "Oh well."
     }]
   },
   {
-    id: "id='q3'",
+    id: "q3",
     class: 'alert alert-secondary',
     qText: "Can you not find your umbrella and dental floss?",
     response: [{
@@ -35,7 +35,7 @@ var questions = [{
     }]
   },
   {
-    id: "id='q6'",
+    id: "q6",
     class: 'alert alert-danger',
     qText: "Has it been more than 24 hours since she texted you with a non-urgent question?",
     response: [{
@@ -55,7 +55,7 @@ var questions = [{
   },
 
   {
-    id: "id='q2'",
+    id: "q2",
     class: 'alert alert-dark',
     qText: "Are your classes messed up?",
     response: [{
@@ -74,7 +74,7 @@ var questions = [{
     }]
   },
   {
-    id: "id='q1'",
+    id: "q1",
     class: 'alert alert-warning',
     qText: "Are you injured?",
     response: [{
@@ -103,38 +103,44 @@ var rowOpen = `<div class="main-questions row d-flex align-items-center ">`
 var ColOpen = `<div class="main-questions col text-center ">`
 var divClose = `</div>`
 var br = `</br>`
-// var rowOpen = `<div class="row">`
-// var pictureColOpen = `<div class="col l5 s12">`
-// var articleColOpen = `<div class="col l7 s12">`
-// var divClose = `</div>`
-// var br = `</br>`
+
 
 //APPEND OBJECTS INTO BODY
-function appendArticle() {
+function appendMain() {
+  $('.main-questions').empty()
   for (var i = 0; i < questions.length; i++) {
     $('.main-questions').append(
-      `<div ${questions[i].id} class="${questions[i].class}" role="alert">` +
-      `<a href="# " class="alert-link ">${questions[i].qText}</a>` +
+      `<div id='${questions[i].id}' class="${questions[i].class}"  onClick="display('${questions[i].id}')" role="alert">` +
+      `<a  href="# " class="alert-link ">${questions[i].qText}</a>` +
       divClose)
   }
 }
-appendArticle()
+appendMain()
 
-function myFunction() {
-  var x = document.getElementById('myDIV');
-  if (x.style.display === 'none') {
-    x.style.display = 'block';
-  } else {
-    x.style.display = 'none';
+function display(id) {
+  for (var i = 0; i < questions.length; i++) {
+    if (questions[i].id === id) {
+      var question = questions[i]
+
+    }
   }
-}
-myFunction()
 
-// function appendArticle() {
-//   for (var i = 0; i < questions.length; i++) {
-//     $('.performer-main').append(rowOpen + pictureColOpen + `<img class="responsive-img" src="${questions[i].img}" alt="${questions[i].imgAlt}">` + divClose + articleColOpen + `<h3>${questions[i].name}</h3>` + `<p>${questions[i].about}</p>` +
-//       `<p><a href="${questions[i].facebook}"><img src="./images/facebook-icon.png" alt="${questions[i].name} Facebook"></a><a href="${questions[i].insta}"><img src="./images/instagram-icon.png" alt="${questions[i].name} Instagram"></a></p>` + divClose + divClose + `<div class="divider"></div>` + br)
-//   }
-// }
-//
-// appendArticle()
+  $('.main-questions').empty();
+  $('.main-questions').append(
+    `<div class="row d-flex align-items-center">` + `
+  <div class="col-12 text-center ">` +
+    `<div class="alert alert-warning" role="alert">` + `${question.qText}` + divClose + divClose + divClose)
+
+  $('.main-questions').append(
+    `<div class="row ">` + `<div class="col-6  text-center">` + `<button data-toggle="collapse" data-target="#yes-answer" type="button" class="btn btn-warning">  ${question.response[0].answer}  </button>` +
+    `<div id='yes-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[0].text +
+    divClose + divClose + `<div class="col-6  text-center">` + `<button data-toggle="collapse" data-target="#no-answer" type="button" class="btn btn-warning">  ${question.response[1].answer}  </button>` +
+    `<div id='no-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[1].text +
+    divClose + divClose + divClose + divClose
+  )
+
+  $('.main-questions').append(
+    `<div class="row ">` + `<div class="col-12 d-flex align-items-center">` + `<a href="#" onClick='appendMain()' id='bottom-button' class="btn btn-dark btn-lg active" role="button" aria-pressed="true">back to questions</a>` + divClose + divClose)
+
+
+}
