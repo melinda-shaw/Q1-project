@@ -41,7 +41,7 @@ var questions = [{
     response: [{
       answer: "Yes",
       text: "Are you the first sibling to leave the nest?",
-      answer: [{
+      responseLevel2: [{
         answer: "Yes",
         text: "Text."
       }, {
@@ -61,7 +61,7 @@ var questions = [{
     response: [{
       answer: "Yes",
       text: "Do you expect her to fix this?",
-      answer: [{
+      responseLevel2: [{
         answer: "Yes",
         text: "Alas, she cannot. It’s all you."
       }, {
@@ -90,17 +90,14 @@ var questions = [{
     }, {
       answer: "No",
       text: "Whew! Text away."
-    }, {
-      answer: "Yes, but only your feelings.",
-      text: "Text and maybe call. !<3!"
     }]
   }
 ]
 
 
 ///// ======================================
-var rowOpen = `<div class="main-questions row d-flex align-items-center ">`
-var ColOpen = `<div class="main-questions col text-center ">`
+var rowOpen = `<div class="main-questions row d-flex align-items-center">`
+var ColOpen = `<div class="main-questions col text-center">`
 var divClose = `</div>`
 var br = `</br>`
 
@@ -132,15 +129,17 @@ function display(id) {
     `<div class="alert alert-warning" role="alert">` + `${question.qText}` + divClose + divClose + divClose)
 
   $('.main-questions').append(
-    `<div class="row ">` + `<div class="col-6  text-center">` + `<button data-toggle="collapse" data-target="#yes-answer" type="button" class="btn btn-warning">  ${question.response[0].answer}  </button>` +
-    `<div id='yes-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[0].text +
+    `<div class="row">
+      <div class="col-6 text-center">
+        <button data-toggle="collapse" data-target="#yes-answer" type="button" class="btn btn-warning">  ${question.response[0].answer}  </button>
+        <div id='yes-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[0].text +
     divClose + divClose + `<div class="col-6  text-center">` + `<button data-toggle="collapse" data-target="#no-answer" type="button" class="btn btn-warning">  ${question.response[1].answer}  </button>` +
     `<div id='no-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[1].text +
     divClose + divClose + divClose
   )
 
+
   $('.main-questions').append(
     `<div class="row ">` + `<div class="col-12 d-flex align-items-center">` + `<a href="#" onClick='appendMain()' id='bottom-button' class="btn btn-dark btn-lg active" role="button" aria-pressed="true">back to questions</a>` + divClose + divClose + divClose)
-
 
 }
