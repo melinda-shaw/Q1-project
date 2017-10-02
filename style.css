@@ -7,17 +7,11 @@ body {
   font-size: 3rem;*/
 }
 
-
-/*.btn-lg {
-  font-size: 2rem;
-}*/
-
 body {
   font-family: 'Sue Ellen Francisco'
   /*'Loved by the King'*/
   , cursive;
   font-size: 1.5rem;
-  color: tomato;
   color: #424242;
 }
 
@@ -35,16 +29,14 @@ h3 {
   font-weight: bold;
 }
 
-
-/*.css-selector {
-  font-family: 'Caveat', cursive;
-  font-family: 'Loved by the King', cursive;
-}*/
-
 .full-page {
   height: 100vh;
   /*padding-left: 25%;
   padding-right: 25%;*/
+}
+
+.btn {
+  margin-bottom: 1em;
 }
 
 #bottom-button {
@@ -54,24 +46,12 @@ h3 {
 }
 
 
+/*h5 {
+  font-family: 'Cabin Sketch', cursive;
+  margin-bottom: 0;
+}*/
+
+
 /*.hidden {
   display: none;
-}*/
-
-
-/*buton h1 {
-  font-family: Victoriandeco Regular, Gill Sans, sans-serif;
-  text-align: center;
-  color: #6e0f77;
-  font-size: 6rem;
-}*/
-
-
-/*h2, h3 {
-  font-family: Gill Sans, sans-serif;
-  font-weight: lighter;
-  font-stretch: expanded;
-  text-align: left;
-  color: #6e0f77;
-  font-size: 3rem;
 }*/

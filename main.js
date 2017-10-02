@@ -136,11 +136,11 @@ function display(id) {
     `<div id='yes-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[0].text +
     divClose + divClose + `<div class="col-6  text-center">` + `<button data-toggle="collapse" data-target="#no-answer" type="button" class="btn btn-warning">  ${question.response[1].answer}  </button>` +
     `<div id='no-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[1].text +
-    divClose + divClose + divClose + divClose
+    divClose + divClose + divClose
   )
 
   $('.main-questions').append(
-    `<div class="row ">` + `<div class="col-12 d-flex align-items-center">` + `<a href="#" onClick='appendMain()' id='bottom-button' class="btn btn-dark btn-lg active" role="button" aria-pressed="true">back to questions</a>` + divClose + divClose)
+    `<div class="row ">` + `<div class="col-12 d-flex align-items-center">` + `<a href="#" onClick='appendMain()' id='bottom-button' class="btn btn-dark btn-lg active" role="button" aria-pressed="true">back to questions</a>` + divClose + divClose + divClose)
 
 
 }
