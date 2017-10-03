@@ -28,8 +28,8 @@ var questions = [{
   },
   {
     id: "q3",
-    image1: "",
-    image2: "",
+    image1: `<img class='image-small' src="./images/image-umbrella.png">`,
+    image2: `<img class='headline' src="./images/image-blankFace.png">`,
     class: 'alert alert-secondary',
     qText: "Can you not find your umbrella and dental floss?",
     response: [{
@@ -42,8 +42,8 @@ var questions = [{
   },
   {
     id: "q6",
-    image1: "",
-    image2: "",
+    image1: `<img class='image-small' src="./images/image-clock.png">`,
+    image2: `<img class='image-small' src="./images/image-hourGlass.png">`,
     class: 'alert alert-danger',
     qText: "Has it been more than 24 hours since she texted you with a non-urgent question?",
     response: [{
@@ -57,8 +57,8 @@ var questions = [{
 
   {
     id: "q2",
-    image1: "",
-    image2: "",
+    image1: `<img class='image-small' src="./images/image-surprisedFace.png">`,
+    image2: `<img class='image-small' src="./images/image-smileFace.png">`,
     class: 'alert alert-dark',
     qText: "Are your classes messed up?",
     response: [{
@@ -71,22 +71,22 @@ var questions = [{
   },
   {
     id: "q1",
-    image1: "",
-    image2: "",
+    image1: `<img class='image-small' src="./images/image-cross.png">`,
+    image2: `<img class='headline' src="./images/image-bandaid.png">`,
     class: 'alert alert-warning',
     qText: "Are you injured?",
     response: [{
       answer: "Yes",
       text: "Did you seek medical help? <br> <br>Yes - Good. Now text. <br><br> No - Seek help or she will freak. : )",
     }, {
-      answer: "No",
-      text: "Whew! Text away."
+      answer: "Yes, but only your feelings.",
+      text: "Text and maybe call. !<3!."
     }]
   },
   {
     id: "q7",
-    image1: "",
-    image2: "",
+    image1: `<img class='image-small' src="./images/image-questionMark.png">`,
+    image2: `<img class='image-small' src="./images/image-exclation.png">`,
     class: 'alert alert-warning',
     qText: "Did she text “You still alive?",
     response: [{
@@ -99,8 +99,8 @@ var questions = [{
   },
   {
     id: "q8",
-    image1: "",
-    image2: "",
+    image1: `<img class='image-small' src="./images/image-hearts.png">`,
+    image2: `<img class='image-small' src="./images/image-star.png">`,
     class: 'alert alert-warning',
     qText: "Are you simply missing her?",
     response: [{
@@ -108,7 +108,7 @@ var questions = [{
       text: "Xoxo! Text",
     }, {
       answer: "Remember how awesome she is though?",
-      text: "Yes - Xoxo! Text. <br><br>No - Even when she did that on cool thing? <br><br> Yes - xo. Text.<br><br> No - Don’t text when in this mood."
+      text: "Yes - Xoxo! Text. <br><br>No - Even when she did that one cool thing? <br><br> Yes - xo. Text.<br><br> No - Don’t text when in this mood."
     }]
   }
 ]
@@ -135,8 +135,8 @@ $('.stored').keyup(function() {
 // });
 
 ///// ======================================
-var rowOpen = `<div class="main-questions row d-flex align-items-center">`
-var ColOpen = `<div class="main-questions col text-center">`
+// var rowOpen = `<div class="main-questions row d-flex align-items-center">`
+// var ColOpen = `<div class="main-questions col text-center">`
 var divClose = `</div>`
 var br = `</br>`
 
