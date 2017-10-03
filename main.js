@@ -94,14 +94,27 @@ var questions = [{
   }
 ]
 ///// Local Storage =========================
-if (typeof(Storage) !== "undefined") {
-  // Store
-  localStorage.setItem("lastname", "Smith");
-  // Retrieve
-  document.getElementById("yourName").innerHTML = localStorage.getItem("???");
-} else {
-  document.getElementById("yourName").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
+
+$(document).ready(function() {
+  function init() {
+    if (localStorage["name"]) {
+      $('#name').val(localStorage["name"]);
+    }
+    if (localStorage["momsName"]) {
+      $('#momsName').val(localStorage["momsName"]);
+    }
+  }
+  init();
+});
+
+$('.stored').keyup(function() {
+  localStorage[$(this).attr('name')] = $(this).val();
+});
+
+// $('#localStorageTest').submit(function() {
+//   localStorage.clear();
+// });
+
 ///// ======================================
 var rowOpen = `<div class="main-questions row d-flex align-items-center">`
 var ColOpen = `<div class="main-questions col text-center">`
