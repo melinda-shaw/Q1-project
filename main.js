@@ -47,15 +47,8 @@ var questions = [{
     class: 'alert alert-danger',
     qText: "Has it been more than 24 hours since she texted you with a non-urgent question?",
     response: [{
-      answer: "Yes",
-      text: "Are you the first sibling to leave the nest?",
-      responseLevel2: [{
-        answer: "Yes",
-        text: "Text."
-      }, {
-        answer: "No",
-        text: "Text tomorrow."
-      }]
+      answer: "Are you the first sibling to leave the nest?",
+      text: "Yes - Text. <br><br>No - Text tomorrow.",
     }, {
       answer: "No",
       text: "You can chill."
@@ -70,14 +63,7 @@ var questions = [{
     qText: "Are your classes messed up?",
     response: [{
       answer: "Yes",
-      text: "Do you expect her to fix this?",
-      responseLevel2: [{
-        answer: "Yes",
-        text: "Alas, she cannot. It’s all you."
-      }, {
-        answer: "No",
-        text: "Do text for sympathy."
-      }]
+      text: "Do you expect her to fix this? <br><br> Yes - Alas, she cannot. It’s all you.<br><br> No - Do text for sympathy.",
     }, {
       answer: "No",
       text: "Amazing! Text to tell her."
@@ -95,6 +81,20 @@ var questions = [{
     }, {
       answer: "No",
       text: "Whew! Text away."
+    }]
+  },
+  {
+    id: "q7",
+    image1: "",
+    image2: "",
+    class: 'alert alert-warning',
+    qText: "Did she text “You still alive?",
+    response: [{
+      answer: "How many “?”s did she use?",
+      text: "One - Text now.<br><br>2 to 6 - Text now with apology.",
+    }, {
+      answer: "No",
+      text: "Good job staying in touch!"
     }]
   },
   {
