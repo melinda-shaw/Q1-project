@@ -93,8 +93,15 @@ var questions = [{
     }]
   }
 ]
-
-
+///// Local Storage =========================
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "Smith");
+  // Retrieve
+  document.getElementById("yourName").innerHTML = localStorage.getItem("???");
+} else {
+  document.getElementById("yourName").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
 ///// ======================================
 var rowOpen = `<div class="main-questions row d-flex align-items-center">`
 var ColOpen = `<div class="main-questions col text-center">`
