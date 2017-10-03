@@ -1,10 +1,12 @@
 var questions = [{
     id: "q4",
+    image1: `<img class='image-small' src="./images/image-bdayHat.png">`,
+    image2: `<img class='image-medium'src='./images/image-bday.png'>`,
     class: 'alert alert-warning',
     qText: "Is it 11:37 p.m. on her bday and you have been crazy busy all day and are now out and your battery is at 4%?",
     response: [{
       answer: "Yes",
-      text: "Text from a friend's phone. Save your battery in case you need to call security on the way back to your dorm."
+      text: "Text from a friend's phone. Save your battery in case you need to call security on the way back to your dorm.",
     }, {
       answer: "No, it's at 8%.",
       text: "Text now."
@@ -12,6 +14,8 @@ var questions = [{
   },
   {
     id: "q5",
+    image1: "",
+    image2: "",
     class: 'alert alert-info',
     qText: "Did you just spot Malia Obama?",
     response: [{
@@ -24,6 +28,8 @@ var questions = [{
   },
   {
     id: "q3",
+    image1: "",
+    image2: "",
     class: 'alert alert-secondary',
     qText: "Can you not find your umbrella and dental floss?",
     response: [{
@@ -36,6 +42,8 @@ var questions = [{
   },
   {
     id: "q6",
+    image1: "",
+    image2: "",
     class: 'alert alert-danger',
     qText: "Has it been more than 24 hours since she texted you with a non-urgent question?",
     response: [{
@@ -56,6 +64,8 @@ var questions = [{
 
   {
     id: "q2",
+    image1: "",
+    image2: "",
     class: 'alert alert-dark',
     qText: "Are your classes messed up?",
     response: [{
@@ -75,6 +85,8 @@ var questions = [{
   },
   {
     id: "q1",
+    image1: "",
+    image2: "",
     class: 'alert alert-warning',
     qText: "Are you injured?",
     response: [{
@@ -151,9 +163,9 @@ function display(id) {
   $('.main-questions').append(
     `<div class="row">
       <div class="col-6 text-center">
-        <button data-toggle="collapse" data-target="#yes-answer" type="button" class="btn btn-warning">  ${question.response[0].answer}  </button>
-        <div id='yes-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[0].text +
-    divClose + divClose + `<div class="col-6  text-center">` + `<button data-toggle="collapse" data-target="#no-answer" type="button" class="btn btn-warning">  ${question.response[1].answer}  </button>` +
+        ${question.image1}<button data-toggle="collapse" data-target="#yes-answer" type="button" class="btn btn-warning">  ${question.response[0].answer}  </button>
+     <div id='yes-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[0].text +
+    divClose + divClose + `<div class="col-6  text-center">` + `${question.image2}<button data-toggle="collapse" data-target="#no-answer" type="button" class="btn btn-warning">  ${question.response[1].answer}  </button>` +
     `<div id='no-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + question.response[1].text +
     divClose + divClose + divClose
   )
