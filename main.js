@@ -14,8 +14,8 @@ var questions = [{
   },
   {
     id: "q5",
-    image1: "",
-    image2: "",
+    image1: `<img class='image-small' src="./images/image-smileySunglasses.png">`,
+    image2: `<img class='image-small' src="./images/image-flag.png">`,
     class: 'alert alert-info',
     qText: "Did you just spot Malia Obama?",
     response: [{
@@ -91,17 +91,24 @@ var questions = [{
     qText: "Are you injured?",
     response: [{
       answer: "Yes",
-      text: "Did you seek medical help?",
-      responseLevel2: [{
-        answer: "Yes",
-        text: "Good. Now text."
-      }, {
-        answer: "No",
-        text: "Seek help or she will freak. : )"
-      }]
+      text: "Did you seek medical help? <br> <br>Yes - Good. Now text. <br><br> No - Seek help or she will freak. : )",
     }, {
       answer: "No",
       text: "Whew! Text away."
+    }]
+  },
+  {
+    id: "q8",
+    image1: "",
+    image2: "",
+    class: 'alert alert-warning',
+    qText: "Are you simply missing her?",
+    response: [{
+      answer: "Yes",
+      text: "Xoxo! Text",
+    }, {
+      answer: "Remember how awesome she is though?",
+      text: "Yes - Xoxo! Text. <br><br>No - Even when she did that on cool thing? <br><br> Yes - xo. Text.<br><br> No - Don’t text when in this mood."
     }]
   }
 ]
