@@ -1,4 +1,17 @@
 var questions = [{
+    id: "q5",
+    image1: `<img class='image-small' src="./images/image-smileySunglasses.png">`,
+    image2: `<img class='image-small' src="./images/image-flag.png">`,
+    class: 'alert alert-info',
+    qText: "Did you just spot Malia Obama?",
+    response: [{
+      answer: "Yes",
+      text: "Text mom. But do not be such a creeper around Malia that she has to text Michelle."
+    }, {
+      answer: "Nope",
+      text: "Oh well."
+    }]
+  }, {
     id: "q4",
     image1: `<img class='image-small' src="./images/image-bdayHat.png">`,
     image2: `<img class='image-medium'src='./images/image-bday.png'>`,
@@ -12,20 +25,7 @@ var questions = [{
       text: "Text now."
     }]
   },
-  {
-    id: "q5",
-    image1: `<img class='image-small' src="./images/image-smileySunglasses.png">`,
-    image2: `<img class='image-small' src="./images/image-flag.png">`,
-    class: 'alert alert-info',
-    qText: "Did you just spot Malia Obama?",
-    response: [{
-      answer: "Yes",
-      text: "Text mom. But do not be such a creeper around Malia that she has to text Michelle."
-    }, {
-      answer: "Nope",
-      text: "Oh well."
-    }]
-  },
+
   {
     id: "q3",
     image1: `<img class='image-small' src="./images/image-umbrella.png">`,
@@ -73,7 +73,7 @@ var questions = [{
     id: "q1",
     image1: `<img class='image-small' src="./images/image-cross.png">`,
     image2: `<img class='headline' src="./images/image-bandaid.png">`,
-    class: 'alert alert-warning',
+    class: 'alert alert-success',
     qText: "Are you injured?",
     response: [{
       answer: "Yes",
@@ -87,8 +87,8 @@ var questions = [{
     id: "q7",
     image1: `<img class='image-small' src="./images/image-questionMark.png">`,
     image2: `<img class='image-small' src="./images/image-exclation.png">`,
-    class: 'alert alert-warning',
-    qText: "Did she text “You still alive?",
+    class: 'alert alert-info',
+    qText: `Did she text "You still alive?"`,
     response: [{
       answer: "How many “?”s did she use?",
       text: "One - Text now.<br><br>2 to 6 - Text now with apology.",
@@ -150,6 +150,7 @@ function appendMain() {
       `<a  href="# " class="alert-link ">${questions[i].qText}</a>` +
       divClose)
   }
+
 }
 appendMain()
 
