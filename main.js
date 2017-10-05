@@ -161,7 +161,6 @@ function appendMain() {
       `<div id='${questions[i].id}' class="${questions[i].class}"  onClick="display('${questions[i].id}')" role="alert">` +
       `<a  href="# " class="alert-link ">${questions[i].qText}</a>` + `</div>`)
   }
-
 }
 appendMain()
 
@@ -182,7 +181,7 @@ function display(id) {
   for (var i = 0; i < question.response.length; i++) {
     var response = question.response[i]
 
-    input += `<div class="col-6  text-center">` + `${response.image}<button data-toggle="collapse" data-target="#${response.type}-answer" type="button" class="btn btn-warning">  ${response.answer}  </button>` +
+    input += `<div class="col-6  text-center">` + `${response.image}<button data-toggle="collapse" data-target="#${response.type}-answer" type="button" class="btn btn-lg btn-warning">  ${response.answer}  </button>` +
       `<div id='${response.type}-answer' style=display-hidden class="collapse alert alert-info" role="alert">` + response.text + `</div>` + `</div>`
   }
   $('.main-questions').append(

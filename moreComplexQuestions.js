@@ -14,19 +14,6 @@
       answer: "no",
       question: {
         qText: 'test nested q'
-        responses: [{
-            answer: "Yes",
-            question: {
-              qText: 'test nested q'
-            }
-          },
-          {
-            answer: "No",
-            question: {
-              qText: 'test nested q'
-            }
-          }
-        ]
       }
     }
   ]
@@ -34,19 +21,35 @@
 
 var q1 = {
   qText: "Has it been more than 24 hours since she texted you with a non-urgent question?",
-  responses: [yes, no]
+  responses: [{
+    bText: 'Yes',
+    question: q1aEndA
+  },{
+    bText: 'No',
+    question: q1b
+  }]
 }
 
-var q2 = {
+var q1b = {
+  qText: "Has it been more than 24 hours since she texted you with a non-urgent question?",
+  responses: [{
+    bText: 'Yes',
+    question: q1aEndA
+  },{
+    bText: 'No',
+    question: q1aEndB
+  }]
+}
+
+var q1a = {
   qText: "Q2?",
   responses: []
 }
 
-var yes = {
-  bText = 'Yes'
+var q1aEndA = {
+  qText: 'End'
 }
 
-var no = {
-  bText: 'No',
-  question: q2
+var q1aEndB = {
+  qText: 'End'
 }
