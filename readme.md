@@ -17,6 +17,6 @@ Launch website with your favorite browser. Begin clicking on questions and their
 
 ## Next Steps
 
-- [ ] Have questions that have been looked at not reappear
+- [ ] Remove previously viewed questions
 - [ ] Make secondary questions appear and click through to reveal more layers
 - [ ] Add user input to make their own questions and answers
